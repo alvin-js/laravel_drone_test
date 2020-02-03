@@ -19,5 +19,3 @@ steps:
   image: virtualorz/dev_compose_php73_laravel
   commands:
   - cp .env.example .env
-  - composer install --prefer-dist
-  - ./vendor/bin/phpunit
