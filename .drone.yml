@@ -1,0 +1,25 @@
+---
+kind: pipeline
+type: docker
+name: test
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: nginx
+    pull: if-not-exists
+    image: virtualorz/dev_compose_nginx
+    commands:
+      - cp .env.example .env
+
+  - name: php
+    pull: if-not-exists
+    image: virtualorz/dev_compose_php73_laravel
+    commands:
+      - cp .env.example .env
+      - composer install --prefer-dist
+      - ./vendor/bin/phpunit
+
+...
