@@ -1,3 +1,3 @@
 FROM virtualorz/dev_compose_nginx
 
-COPY --from=build * /var/project
+COPY . /var/project
