@@ -11,9 +11,6 @@ steps:
 - name: build-nginx-image
   pull: if-not-exists
   image: plugins/docker
-  commands:
-    - mkdir -p /usr/local/project/${DRONE_REPO_NAME}
-    - rsync -r /drone_test/* /usr/local/project/${DRONE_REPO_NAME}
   settings:
     registry: registry.hub.docker.com
     repo: registry.hub.docker.com/virtualorz/docker_compose_nginx_build
