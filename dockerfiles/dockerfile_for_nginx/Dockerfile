@@ -1,5 +1,5 @@
 FROM virtualorz/dev_compose_nginx
 
-RUN echo $(ls -1 /usr/local)
+RUN echo $(ls -1 /usr/local/project/)
 
-COPY ./drone_test /var/project
+COPY /usr/local/project/ /var/project
