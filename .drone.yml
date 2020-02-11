@@ -15,8 +15,8 @@ steps:
     host: 35.229.238.232
     username: alvin
     port: 22
-    key:
-      from_secret: ./mykey
++   key:
++     from_secret: ./mykey
     script:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
