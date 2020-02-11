@@ -21,6 +21,7 @@ steps:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
 
+
 - name: build-nginx-image
   pull: if-not-exists
   image: plugins/docker
