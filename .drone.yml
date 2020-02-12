@@ -24,6 +24,7 @@ steps:
     script:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
+      - cat > .env
       - sudo echo $${ENV} > .env
 
 
