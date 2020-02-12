@@ -19,7 +19,7 @@ steps:
       from_secret: privateKey
     envs:
       - AWS_ACCESS_KEY_ID:
-          from_secret: aws_access_key_id
+          from_secret: aws_access_key_ids
     script:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
