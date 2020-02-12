@@ -22,24 +22,24 @@ steps:
       - sudo git pull
 
 
-- name: build-nginx-image
-  pull: if-not-exists
-  image: plugins/docker
-  settings:
-    registry: registry.hub.docker.com
-    repo: registry.hub.docker.com/virtualorz/docker_compose_nginx_build
-    dockerfile: dockerfiles/dockerfile_for_nginx/Dockerfile
-    auto_tag: true
-    username: virtualorz
-    password: 2uxirgil
+#- name: build-nginx-image
+#  pull: if-not-exists
+#  image: plugins/docker
+#  settings:
+#    registry: registry.hub.docker.com
+#    repo: registry.hub.docker.com/virtualorz/docker_compose_nginx_build
+#    dockerfile: dockerfiles/dockerfile_for_nginx/Dockerfile
+#    auto_tag: true
+#    username: virtualorz
+#    password: 2uxirgil
 
-- name: build-php-image
-  pull: if-not-exists
-  image: plugins/docker
-  settings:
-    registry: registry.hub.docker.com
-    repo: registry.hub.docker.com/virtualorz/dev_compose_php73_laravel_build
-    dockerfile: dockerfiles/dockerfile_for_laravel/Dockerfile
-    auto_tag: true
-    username: virtualorz
-    password: 2uxirgil
+#- name: build-php-image
+#  pull: if-not-exists
+#  image: plugins/docker
+#  settings:
+#    registry: registry.hub.docker.com
+#    repo: registry.hub.docker.com/virtualorz/dev_compose_php73_laravel_build
+#    dockerfile: dockerfiles/dockerfile_for_laravel/Dockerfile
+#    auto_tag: true
+#    username: virtualorz
+#    password: 2uxirgil
