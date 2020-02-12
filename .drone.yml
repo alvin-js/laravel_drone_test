@@ -25,7 +25,7 @@ steps:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
       - echo $${ENV}
-      - echo $${ENV} | sudo tee .env
+      - echo $${ENV}  | sudo tee .env
 
 
 #- name: build-nginx-image
