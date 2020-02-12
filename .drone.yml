@@ -12,19 +12,19 @@ steps:
   pull: if-not-exists
   image: appleboy/drone-ssh
   environment:
-    SSH_DEPLOY_KEY:
-      from_secret: aws_access_key_ids
+    ENV:
+      from_secret: env
   settings:
     host: 35.229.238.232
     username: alvin
     port: 22
     key:
       from_secret: privateKey
-    envs: [ssh_deploy_key]
+    envs: [ENV]
     script:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
-      - echo $${SSH_DEPLOY_KEY}
+      - echo $${ENV} > .env
 
 
 #- name: build-nginx-image
