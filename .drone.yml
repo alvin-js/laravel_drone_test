@@ -20,10 +20,11 @@ steps:
     port: 22
     key:
       from_secret: privateKey
-    envs: [ENV]
+    envs: [env]
     script:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
+      - ecdho $${ENV}
       - sudo bash -c "echo 1234567 > .env"
 
 
