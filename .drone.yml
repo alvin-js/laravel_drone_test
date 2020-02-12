@@ -18,11 +18,12 @@ steps:
     key:
       from_secret: privateKey
     envs:
-      - aws_access_key_id: 12345
+      - AWS_ACCESS_KEY_ID:
+          from_secret: aws_access_key_id
     script:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
-      - echo $AWS_ACCESS_KEY_ID
+      - echo $${AWS_ACCESS_KEY_ID}
 
 
 #- name: build-nginx-image
