@@ -20,7 +20,7 @@ steps:
     port: 22
     key:
       from_secret: privateKey
-    envs: [env]
+    envs: [ENV]
     script:
       - cd /var/www/html/laravel_drone_test
       - sudo git pull
