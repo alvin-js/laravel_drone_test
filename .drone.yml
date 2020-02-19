@@ -17,6 +17,7 @@ steps:
       dockerfile: dockerfiles/dockerfile_for_nginx/Dockerfile
       json_key:
         from_secret: google_credentials
+
   - name: publish_php
       image: plugins/gcr
       settings:
