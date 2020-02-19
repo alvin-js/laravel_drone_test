@@ -8,24 +8,43 @@ platform:
   arch: amd64
 
 steps:
-- name: ssh-git-pull
-  pull: if-not-exists
-  image: appleboy/drone-ssh
-  environment:
-    ENV:
-      from_secret: env
-  settings:
-    host: 35.229.238.232
-    username: alvin
-    port: 22
-    key:
-      from_secret: privateKey
-    envs: [ENV]
-    script:
-      - cd /var/www/html/laravel_drone_test
-      - sudo git pull
-      - echo $${ENV}
-      - echo $${ENV} | sudo tee .env
+  - name: publish_nginx
+    image: plugins/gcr
+    settings:
+      registry: asia.gcr.io
+      repo: nodal-wall-248502/docker_compose_nginx_build
+      tags: latest
+      dockerfile: dockerfiles/dockerfile_for_nginx/Dockerfile
+      json_key:
+        from_secret: google_credentials
+  - name: publish_php
+      image: plugins/gcr
+      settings:
+        registry: asia.gcr.io
+        repo: nodal-wall-248502/docker_compose_php73_laravel_build
+        tags: latest
+        dockerfile: dockerfiles/dockerfile_for_laravel/Dockerfile
+        json_key:
+          from_secret: google_credentials
+
+#- name: ssh-git-pull
+#  pull: if-not-exists
+#  image: appleboy/drone-ssh
+#  environment:
+#    ENV:
+#      from_secret: env
+#  settings:
+#    host: 35.229.238.232
+#    username: alvin
+#    port: 22
+#    key:
+#      from_secret: privateKey
+#    envs: [ENV]
+#    script:
+#      - cd /var/www/html/laravel_drone_test
+#      - sudo git pull
+#      - echo $${ENV}
+#      - echo $${ENV} | sudo tee .env
 
 
 #- name: build-nginx-image
