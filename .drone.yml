@@ -16,7 +16,7 @@ steps:
       tags: latest
       dockerfile: dockerfiles/dockerfile_for_nginx/Dockerfile
       json_key:
-        from_secret: google_credentials
+        from_secret: privateKey
 
   - name: publish_php
       image: plugins/gcr
@@ -26,7 +26,7 @@ steps:
         tags: latest
         dockerfile: dockerfiles/dockerfile_for_laravel/Dockerfile
         json_key:
-          from_secret: google_credentials
+          from_secret: privateKey
 
 #- name: ssh-git-pull
 #  pull: if-not-exists
