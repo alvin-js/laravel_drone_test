@@ -1,6 +1,8 @@
 FROM virtualorz/dev_compose_php73_laravel
 
 COPY . /var/project
+RUN CD /var/project
+RUN php composer install
 
 #supervisor
 ADD ./dockerfiles/config/supervisor/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
