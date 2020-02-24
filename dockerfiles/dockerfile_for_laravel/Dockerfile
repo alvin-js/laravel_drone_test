@@ -1,6 +1,7 @@
 FROM virtualorz/dev_compose_php73_laravel
 
 COPY . /var/project
+COPY ./.env.example /var/project/.env
 RUN cd /var/project
 CMD bash -c "composer install"
 
