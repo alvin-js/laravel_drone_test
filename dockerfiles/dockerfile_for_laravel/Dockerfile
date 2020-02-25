@@ -4,6 +4,10 @@ COPY . /var/project
 COPY ./.env.example /var/project/.env
 RUN cd /var/project && composer install
 
+RUN chown -R www-data:www-data \
+        /var/project/storage \
+        /var/project/bootstrap/cache
+
 #supervisor
 ADD ./dockerfiles/config/supervisor/laravel-worker.conf /etc/supervisor/conf.d/laravel-worker.conf
 
