@@ -23,3 +23,7 @@ Route::get('/A', function () {
 Route::get('/B', function () {
     return view('welcomeB');
 });
+
+Route::get('/C', function () {
+    return view('welcomeC');
+});
