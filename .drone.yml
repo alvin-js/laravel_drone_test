@@ -51,15 +51,15 @@ steps:
         }
 
   - name: k8s_php73_deployee
-      image: quay.io/honestbee/drone-kubernetes
-      settings:
-        kubernetes_server: https://34.67.240.171
-        kubernetes_token: ya29.a0Adw1xeVMOndu5LRG-NxBgGNJsvUgnogJtzLlPnG-Z3pL1DxNom7PCI4TVKvlC5g5Eu0sZdy5nTpInn5__r8AeuZBf6FO7cmiPFsytoait2wrjOWAUxwTSX9UUUL15hwacGPJSGMMImJPI_weDwYmThFdoorzMYObQDi8UUthCbzZApSyHr3KuKAX67gK3PmQLDviiqof9bHay0LS7N7H0iy61mqvP_zR0Hv1opueN194uedPqtqU0RgKPs_xyQH_LqnZOJto89PNag
-        namespace: laravel-test
-        deployment: php73-fpm
-        repo: nodal-wall-248502/docker_compose_php73_laravel_build
-        container: docker-compose-php73-laravel-build-sha256-1
-        tag: latest
+    image: quay.io/honestbee/drone-kubernetes
+    settings:
+      kubernetes_server: https://34.67.240.171
+      kubernetes_token: ya29.a0Adw1xeVMOndu5LRG-NxBgGNJsvUgnogJtzLlPnG-Z3pL1DxNom7PCI4TVKvlC5g5Eu0sZdy5nTpInn5__r8AeuZBf6FO7cmiPFsytoait2wrjOWAUxwTSX9UUUL15hwacGPJSGMMImJPI_weDwYmThFdoorzMYObQDi8UUthCbzZApSyHr3KuKAX67gK3PmQLDviiqof9bHay0LS7N7H0iy61mqvP_zR0Hv1opueN194uedPqtqU0RgKPs_xyQH_LqnZOJto89PNag
+      namespace: laravel-test
+      deployment: php73-fpm
+      repo: nodal-wall-248502/docker_compose_php73_laravel_build
+      container: docker-compose-php73-laravel-build-sha256-1
+      tag: latest
 
 
 #
