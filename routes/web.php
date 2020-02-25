@@ -27,3 +27,8 @@ Route::get('/B', function () {
 Route::get('/C', function () {
     return view('welcomeC');
 });
+
+Route::get('/D', function () {
+    return view('welcomeD');
+});
+
