@@ -3,6 +3,7 @@ FROM virtualorz/dev_compose_php73_laravel
 COPY . /var/project
 COPY ./.env.example /var/project/.env
 RUN cd /var/project && composer install
+RUN cd /var/project && php artisan key:generate
 
 RUN chown -R www-data:www-data \
         /var/project/storage \
