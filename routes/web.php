@@ -32,3 +32,7 @@ Route::get('/D', function () {
     return view('welcomeD');
 });
 
+Route::get('/E', function () {
+    return view('welcomeE');
+});
+

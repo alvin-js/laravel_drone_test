@@ -1,4 +1,4 @@
-FROM virtualorz/dev_compose_php73_laravel
+FROM virtualorz/php73_laravel_base
 
 COPY . /var/project
 COPY ./.env.example /var/project/.env
