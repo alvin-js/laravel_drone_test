@@ -34,7 +34,6 @@ steps:
     settings:
       registry: asia.gcr.io
       repo: nodal-wall-248502/docker_compose_php73_laravel_build
-      cache_from: virtualorz/laravel_composer_base
       tags: 0.893
       dockerfile: dockerfiles/dockerfile_for_laravel/Dockerfile
       json_key: >

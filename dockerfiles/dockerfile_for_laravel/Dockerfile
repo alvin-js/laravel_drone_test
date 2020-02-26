@@ -1,12 +1,8 @@
 FROM virtualorz/php73_laravel_base
 
-COPY ./composer.json /var/project/composer.json
-RUN cd /var/project && composer install --prefer-dist --no-scripts --no-dev --no-autoloader
-RUN cd /var/project && composer dump-autoload --no-scripts --no-dev --optimize
-
 COPY . /var/project
 COPY ./.env.example /var/project/.env
-#RUN cd /var/project && composer install
+RUN cd /var/project && composer install
 RUN cd /var/project && php artisan key:generate
 
 RUN chown -R www-data:www-data \
