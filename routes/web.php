@@ -40,3 +40,7 @@ Route::get('/F', function () {
     return view('welcomeF');
 });
 
+Route::get('/G', function () {
+    return view('welcomeG');
+});
+
