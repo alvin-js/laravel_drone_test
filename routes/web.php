@@ -37,6 +37,6 @@ Route::get('/E', function () {
 });
 
 Route::get('/F', function () {
-    return view('welcomeE');
+    return view('welcomeF');
 });
 
