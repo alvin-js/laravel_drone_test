@@ -13,7 +13,7 @@ steps:
     settings:
       registry: asia.gcr.io
       repo: nodal-wall-248502/docker_compose_nginx_build
-      tags: 0.890
+      tags: 0.891
       dockerfile: dockerfiles/dockerfile_for_nginx/Dockerfile
       json_key: >
         {
@@ -35,7 +35,7 @@ steps:
       registry: asia.gcr.io
       repo: nodal-wall-248502/docker_compose_php73_laravel_build
       cache_from: virtualorz/laravel_composer_base
-      tags: 0.890
+      tags: 0.891
       dockerfile: dockerfiles/dockerfile_for_laravel/Dockerfile
       json_key: >
         {
@@ -55,24 +55,24 @@ steps:
     image: quay.io/honestbee/drone-kubernetes
     settings:
       kubernetes_server: https://34.67.240.171
-      kubernetes_token: ya29.a0Adw1xeVMOndu5LRG-NxBgGNJsvUgnogJtzLlPnG-Z3pL1DxNom7PCI4TVKvlC5g5Eu0sZdy5nTpInn5__r8AeuZBf6FO7cmiPFsytoait2wrjOWAUxwTSX9UUUL15hwacGPJSGMMImJPI_weDwYmThFdoorzMYObQDi8UUthCbzZApSyHr3KuKAX67gK3PmQLDviiqof9bHay0LS7N7H0iy61mqvP_zR0Hv1opueN194uedPqtqU0RgKPs_xyQH_LqnZOJto89PNag
-      namespace: laravel-test
+      kubernetes_token: ya29.Iq8BvwcNUfuuCn_9HlkDxSDOTU-7sUGIlSWsKdUsycSmpchgWcDbKCJ45Dm68mXeuZN5pgI1Ve03mkFguRnJahhpEaSFHaGyNO3WsUG6dwMpczG7qcPyK0WmwQLUH0-LN3oaa-PG8q0pcGSI51D_Donvq1ubx7NQtfAW1_Tew2-knlBRIlkgKmf2xzFtedcOLZ4M09jGjgWozBvthNRp-8gIxVC8gal7ZOCWEIeg5GPNtA
+      namespace: default
       deployment: nginx-1
       repo: asia.gcr.io/nodal-wall-248502/docker_compose_nginx_build
       container: docker-compose-nginx-build-sha256-1
-      tag: 0.890
+      tag: 0.891
 
 
   - name: k8s_php73_deployee
     image: quay.io/honestbee/drone-kubernetes
     settings:
       kubernetes_server: https://34.67.240.171
-      kubernetes_token: ya29.a0Adw1xeVMOndu5LRG-NxBgGNJsvUgnogJtzLlPnG-Z3pL1DxNom7PCI4TVKvlC5g5Eu0sZdy5nTpInn5__r8AeuZBf6FO7cmiPFsytoait2wrjOWAUxwTSX9UUUL15hwacGPJSGMMImJPI_weDwYmThFdoorzMYObQDi8UUthCbzZApSyHr3KuKAX67gK3PmQLDviiqof9bHay0LS7N7H0iy61mqvP_zR0Hv1opueN194uedPqtqU0RgKPs_xyQH_LqnZOJto89PNag
-      namespace: laravel-test
+      kubernetes_token: ya29.Iq8BvwcNUfuuCn_9HlkDxSDOTU-7sUGIlSWsKdUsycSmpchgWcDbKCJ45Dm68mXeuZN5pgI1Ve03mkFguRnJahhpEaSFHaGyNO3WsUG6dwMpczG7qcPyK0WmwQLUH0-LN3oaa-PG8q0pcGSI51D_Donvq1ubx7NQtfAW1_Tew2-knlBRIlkgKmf2xzFtedcOLZ4M09jGjgWozBvthNRp-8gIxVC8gal7ZOCWEIeg5GPNtA
+      namespace: default
       deployment: php73-fpm
       repo: asia.gcr.io/nodal-wall-248502/docker_compose_php73_laravel_build
       container: docker-compose-php73-laravel-build-sha256-1
-      tag: 0.890
+      tag: 0.891
 
 
 #
