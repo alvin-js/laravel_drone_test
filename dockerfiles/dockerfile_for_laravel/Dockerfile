@@ -1,8 +1,8 @@
 FROM virtualorz/php73_laravel_base
 
 COPY ./composer.json /var/project/composer.json
-RUN composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
-RUN composer dump-autoload --no-scripts --no-dev --optimize
+RUN cd /var/project && composer install --prefer-dist --no-scripts --no-dev --no-autoloader && rm -rf /root/.composer
+RUN cd /var/project && composer dump-autoload --no-scripts --no-dev --optimize
 
 COPY . /var/project
 COPY ./.env.example /var/project/.env
