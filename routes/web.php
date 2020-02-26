@@ -36,3 +36,7 @@ Route::get('/E', function () {
     return view('welcomeE');
 });
 
+Route::get('/F', function () {
+    return view('welcomeE');
+});
+
