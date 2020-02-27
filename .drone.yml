@@ -13,7 +13,7 @@ steps:
     settings:
       registry: asia.gcr.io
       repo: nodal-wall-248502/docker_compose_nginx_build
-      tags: 0.897
+      tags: 0.898
       dockerfile: dockerfiles/dockerfile_for_nginx/Dockerfile
       json_key: >
         {
@@ -38,7 +38,7 @@ steps:
       deployment: nginx-1
       repo: asia.gcr.io/nodal-wall-248502/docker_compose_nginx_build
       container: docker-compose-nginx-build-sha256-1
-      tag: 0.897
+      tag: 0.898
 
 
   - name: publish_php
@@ -46,7 +46,7 @@ steps:
     settings:
       registry: asia.gcr.io
       repo: nodal-wall-248502/docker_compose_php73_laravel_build
-      tags: 0.897
+      tags: 0.898
       dockerfile: dockerfiles/dockerfile_for_laravel/Dockerfile
       json_key: >
         {
@@ -71,7 +71,7 @@ steps:
       deployment: php73-fpm
       repo: asia.gcr.io/nodal-wall-248502/docker_compose_php73_laravel_build
       container: docker-compose-php73-laravel-build-sha256-1
-      tag: 0.897
+      tag: 0.898
 
 
 #
