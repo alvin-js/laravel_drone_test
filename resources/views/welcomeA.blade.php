@@ -81,7 +81,7 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Laravel...Page A 2
+            Laravel...Page A 3
         </div>
 
         <div class="links">
